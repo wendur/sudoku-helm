@@ -1,0 +1,15 @@
+app_name: sudoku-app
+image: wendur/sudokuk8s:latest
+resources:
+  requests:
+    cpu: 100m
+    memory: 100Mi
+  limits:
+    cpu: 100m
+    memory: 100Mi
+ports:
+  containerPort: 5000
+  port: 30100
+replicas: 3
+service:
+  type: LoadBalancer
